@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affine Transformer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Affine Transformer</h1>
+    </header>
+    <div class="container">
+        <form id="uploadForm">
+            <div class="form-group">
+                <label for="fileInput">Upload Image:</label>
+                <input type="file" id="fileInput" name="file" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transformation">Transformation:</label>
+                <select id="transformation" name="transformation">
+                    <option value="rotation">Rotation</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="shearing">Shearing</option>
+                    <option value="translation">Translation</option>
+                    <option value="scaling">Scaling</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="scaleInput">Scale Factor:</label>
+                <input type="number" id="scaleInput" name="scaleInput" placeholder="1" step="0.1">
+            </div>
+
+            <div class="form-group">
+                <label for="angleInput">Angle (degrees):</label>
+                <input type="number" id="angleInput" name="angleInput" placeholder="30" step="1">
+            </div>
+
+            <div class="form-group">
+                <label for="offsetXInput">Offset X:</label>
+                <input type="number" id="offsetXInput" name="offsetXInput" placeholder="30" step="1">
+            </div>
+
+            <div class="form-group">
+                <label for="offsetYInput">Offset Y:</label>
+                <input type="number" id="offsetYInput" name="offsetYInput" placeholder="30" step="1">
+            </div>
+
+            <div class="form-group">
+                <label for="shearXInput">Shear X:</label>
+                <input type="number" id="shearXInput" name="shearXInput" placeholder="0" step="0.1">
+            </div>
+            
+            <div class="form-group">
+                <label for="shearYInput">Shear Y:</label>
+                <input type="number" id="shearYInput" name="shearYInput" placeholder="0" step="0.1">
+            </div>
+            
+
+            <button type="submit">Apply Transformation</button>
+        </form>
+
+        <div id="result">
+            <h2>Result:</h2>
+            <div class="image-container">
+                <img id="resultImage" src="assets/placeholder.png" alt="Result will appear here">
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
