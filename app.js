@@ -8,7 +8,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
 
     // Collect parameter values, defaulting to null if not provided
     const params = {
-        scale_factor: parseFloat(document.getElementById('scaleInput').value) || 1,
+        
         angle: parseFloat(document.getElementById('angleInput').value) || 0,
         offset_x: parseInt(document.getElementById('offsetXInput').value) || 0,
         offset_y: parseInt(document.getElementById('offsetYInput').value) || 0,
